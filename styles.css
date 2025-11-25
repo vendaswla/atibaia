@@ -481,7 +481,7 @@ body {
     }
 
     .hero {
-        padding-top: 180px; /* Aumenta o padding para garantir que o conteúdo comece abaixo do cabeçalho fixo */
+        padding-top: 220px; /* Aumenta o padding para garantir que o conteúdo comece abaixo do cabeçalho fixo */
     }
 
     .hero-content {
