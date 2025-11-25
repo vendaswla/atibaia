@@ -115,6 +115,15 @@ body {
     padding: 0 20px;
 }
 
+.hero-text {
+    /* Adicionado para centralizar o texto e evitar cortes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 0 20px; /* Adiciona padding lateral para evitar que o texto toque as bordas em telas muito pequenas */
+}
+
 .hero-title {
     font-size: 4rem;
     font-weight: 700;
@@ -128,6 +137,9 @@ body {
     color: #34495e;
     margin-bottom: 1.5rem;
     font-weight: 400;
+    /* Adicionado para garantir que o texto não ultrapasse o contêiner */
+    max-width: 100%; 
+    word-wrap: break-word;
 }
 
 .hero-description {
@@ -477,9 +489,15 @@ body {
     .hero-title {
         font-size: 2.5rem;
     }
+    .hero-text {
+        padding: 0 20px; /* Aumenta o padding no mobile para melhor visualização */
+    }
 
     .hero-subtitle {
         font-size: 1.4rem;
+        /* Garante que o subtítulo não seja cortado */
+        max-width: 100%;
+        word-wrap: break-word;
     }
 
     .services-grid {
@@ -658,11 +676,12 @@ body {
 
 .footer-cta {
     color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.2rem; /* Aumentando um pouco o tamanho */
+    font-weight: 700; /* Deixando a fonte mais grossa (bold) */
     margin: 0;
     flex-grow: 1; /* Permite que a frase ocupe o espaço central */
     text-align: center;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Adicionando uma leve sombra para destacar */
 }
 
 .social-media-footer {
