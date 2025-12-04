@@ -1,4 +1,4 @@
-/* RESET E CONFIGURAÇÕES BÁSICAS - MOBILE FIRST */
+/* RESET TOTAL - MOBILE FIRST */
 * {
     margin: 0;
     padding: 0;
@@ -6,204 +6,188 @@
 }
 
 html {
-    font-size: 14px; /* Base menor para mobile */
+    font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    color: #2c3e50;
+    line-height: 1.4;
+    color: #333;
+    background: #f8f9fa;
+    padding-top: 60px; /* HEADER BAIXINHO */
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    padding-top: 70px; /* Espaço para header fixo */
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* HEADER COMPACTO PARA MOBILE */
+/* HEADER SUPER COMPACTO */
 .header {
     position: fixed;
     top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(5px);
+    left: 0;
+    right: 0;
+    background: white;
     z-index: 1000;
-    padding: 0.5rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: 70px;
+    height: 60px;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 60px;
+    padding: 0 12px;
+    max-width: 100%;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .logo h1 {
     color: #27ae60;
-    font-size: 1.3rem; /* Menor no mobile */
+    font-size: 1.1rem; /* PEQUENO */
     font-weight: 700;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .logo span {
-    color: #7f8c8d;
-    font-size: 0.75rem;
-    font-weight: 300;
+    color: #666;
+    font-size: 0.7rem; /* PEQUENO */
+    margin-top: 2px;
 }
 
 .nav {
     display: flex;
-    gap: 0.8rem;
+    gap: 8px; /* ESPAÇO MÍNIMO */
 }
 
 .nav-link {
     text-decoration: none;
-    color: #2c3e50;
+    color: #333;
+    font-size: 0.75rem; /* PEQUENO */
     font-weight: 500;
-    font-size: 0.85rem;
-    padding: 0.3rem 0;
+    padding: 4px 6px;
     white-space: nowrap;
 }
 
-/* HERO SECTION - OTIMIZADA PARA MOBILE */
+/* HERO - TUDO EM UMA COLUNA */
 .hero {
-    position: relative;
+    padding: 20px 12px;
     background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
-    padding: 2rem 0;
-    min-height: auto;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    align-items: center;
 }
 
 .hero-text {
     width: 100%;
-    text-align: center;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    color: #34495e;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem; /* PEQUENO E LEGÍVEL */
+    color: #2c3e50;
+    margin-bottom: 15px;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.3;
+    text-align: center;
     padding: 0 5px;
     word-break: break-word;
-    hyphens: auto;
 }
 
-/* FORMULÁRIO OTIMIZADO PARA MOBILE */
+/* FORMULÁRIO SUPER COMPACTO */
 .quote-form-section {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 1.2rem;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
     width: 100%;
 }
 
 .quote-form-title {
-    font-size: 1.3rem;
+    font-size: 1.05rem; /* PEQUENO */
     color: #2c3e50;
-    margin-bottom: 0.8rem;
+    margin-bottom: 8px;
     font-weight: 600;
     text-align: center;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .quote-form-subtitle {
-    font-size: 0.9rem;
-    color: #7f8c8d;
-    margin-bottom: 1.2rem;
+    font-size: 0.8rem; /* PEQUENO */
+    color: #666;
+    margin-bottom: 12px;
     text-align: center;
-    line-height: 1.4;
-    padding: 0 5px;
-}
-
-.quote-form-subtitle strong {
-    color: #2c3e50;
-    font-weight: 700;
+    line-height: 1.3;
+    padding: 0 3px;
 }
 
 .quote-form {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 1.2rem;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .form-input,
 .form-textarea {
-    padding: 0.8rem;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-    color: #2c3e50;
-    background: #ffffff;
+    font-size: 0.9rem;
+    color: #333;
+    background: #fff;
     width: 100%;
 }
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-    color: #95a5a6;
-    font-size: 0.9rem;
+    color: #999;
+    font-size: 0.85rem;
 }
 
 .form-textarea {
+    min-height: 80px;
     resize: vertical;
-    min-height: 90px;
-    line-height: 1.4;
 }
 
 .form-submit-btn {
     background: linear-gradient(135deg, #f39c12, #e67e22);
     color: white;
-    padding: 0.9rem;
+    padding: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 5px;
 }
 
 .quote-form-note {
-    font-size: 0.85rem;
-    color: #7f8c8d;
+    font-size: 0.75rem;
+    color: #666;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.3;
     padding: 0 5px;
 }
 
-/* BOTÕES CTA - MELHOR PARA MOBILE */
+/* BOTÕES CTA - COMPACTOS */
 .cta-buttons-group {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    margin: 1.5rem 0;
+    gap: 10px;
+    margin: 15px 0;
     width: 100%;
 }
 
@@ -211,77 +195,73 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    padding: 0.9rem 1.2rem;
-    border-radius: 8px;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
+    font-size: 0.85rem; /* PEQUENO */
     width: 100%;
     text-align: center;
 }
 
 .whatsapp-cta {
-    background: linear-gradient(135deg, #25d366, #128c7e);
+    background: #25d366;
     color: white;
 }
 
 .phone-cta {
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: #3498db;
     color: white;
 }
 
 /* IMAGEM DO HERO */
 .hero-image {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0 10px;
+    margin-top: 15px;
 }
 
 .hero-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* SEÇÕES GERAIS */
 .services, .testimonials, .contact {
-    padding: 2.5rem 0;
+    padding: 25px 12px;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #2c3e50;
-    margin-bottom: 1.8rem;
+    margin-bottom: 15px;
     font-weight: 600;
-    padding: 0 15px;
+    text-align: center;
+    padding: 0 10px;
 }
 
 /* SERVIÇOS */
 .services-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.2rem;
-    padding: 0 10px;
+    gap: 12px;
 }
 
 .service-card {
     background: white;
-    padding: 1.2rem;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .service-image {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem;
-    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -292,39 +272,41 @@ body {
 }
 
 .service-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 .service-card p {
-    font-size: 0.9rem;
-    color: #7f8c8d;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.3;
 }
 
 /* DEPOIMENTOS */
 .testimonials {
-    background: #f8f9fa;
+    background: #f1f8ff;
 }
 
 .testimonials-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.2rem;
-    padding: 0 10px;
+    gap: 12px;
 }
 
 .testimonial-card {
     background: white;
-    padding: 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .testimonial-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-style: italic;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: #444;
 }
 
 .testimonial-footer {
@@ -332,72 +314,74 @@ body {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #eee;
-    padding-top: 0.8rem;
+    padding-top: 8px;
 }
 
 .testimonial-author {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    color: #333;
 }
 
 .stars {
     color: #f39c12;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 /* CONTATO */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 10px;
+    gap: 12px;
 }
 
 .contact-card {
     background: white;
-    padding: 1.2rem;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 8px;
     text-decoration: none;
     color: inherit;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .contact-icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 0.8rem;
+    margin: 0 auto 8px;
 }
 
 .contact-icon i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
 }
 
 .contact-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: #333;
 }
 
 .contact-card p {
-    font-size: 0.85rem;
-    color: #7f8c8d;
+    font-size: 0.8rem;
+    color: #666;
 }
+
+/* CORES DOS ÍCONES */
+.whatsapp .contact-icon { background: #25d366; }
+.phone .contact-icon { background: #3498db; }
+.maps .contact-icon { background: #34a853; }
+.google-my-business .contact-icon { background: #4285f4; }
 
 /* RODAPÉ */
 .footer {
     background: #2c3e50;
     color: white;
-    padding: 1.5rem 0 1rem;
+    padding: 20px 12px 15px;
     text-align: center;
 }
 
@@ -405,31 +389,91 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .footer-cta {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.3;
     padding: 0 10px;
 }
 
 .social-media-footer {
     display: flex;
-    gap: 0.8rem;
+    gap: 12px;
 }
 
 .social-media-footer a {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .footer-copyright {
-    font-size: 0.8rem;
-    color: #bdc3c7;
-    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ========== TABLET (480px+) ========== */
+@media (min-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+    
+    body {
+        padding-top: 65px;
+    }
+    
+    .header {
+        height: 65px;
+    }
+    
+    .header .container {
+        padding: 0 20px;
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .logo span {
+        font-size: 0.8rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 5px 8px;
+    }
+    
+    .hero {
+        padding: 25px 20px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .quote-form-section {
+        padding: 18px;
+    }
+    
+    .quote-form-title {
+        font-size: 1.2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ========== DESKTOP (768px+) ========== */
@@ -439,38 +483,45 @@ body {
     }
     
     body {
-        padding-top: 80px;
+        padding-top: 70px;
     }
     
     .header {
-        height: 80px;
-        padding: 0.8rem 0;
+        height: 70px;
+    }
+    
+    .header .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
     }
     
     .logo h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .logo span {
         font-size: 0.9rem;
     }
     
+    .nav {
+        gap: 20px;
+    }
+    
     .nav-link {
         font-size: 0.95rem;
-        gap: 1.5rem;
     }
     
     .hero {
-        padding: 3rem 0;
-        min-height: 85vh;
+        padding: 40px 30px;
     }
     
     .hero-content {
         flex-direction: row;
-        gap: 3rem;
         align-items: center;
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0 auto;
+        gap: 40px;
     }
     
     .hero-text {
@@ -482,20 +533,10 @@ body {
         font-size: 1.8rem;
         text-align: left;
         padding: 0;
-        max-width: 500px;
     }
     
     .quote-form-section {
         max-width: 500px;
-        padding: 1.8rem;
-    }
-    
-    .quote-form-title {
-        font-size: 1.5rem;
-    }
-    
-    .quote-form-subtitle {
-        font-size: 1rem;
     }
     
     .cta-buttons-group {
@@ -505,34 +546,28 @@ body {
     
     .cta-button {
         width: auto;
-        padding: 1rem 1.8rem;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
     
     .hero-image {
         flex: 1;
-        padding: 0;
-    }
-    
-    .hero-image img {
-        max-width: 450px;
+        margin-top: 0;
     }
     
     .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        padding: 0;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
     }
     
     .testimonials-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 0;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
     }
     
     .contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1.2rem;
-        padding: 0;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
     }
     
     .footer-content-wrapper {
@@ -540,74 +575,55 @@ body {
         justify-content: space-between;
         align-items: center;
     }
-    
-    .footer-cta {
-        text-align: left;
-        flex: 1;
-    }
 }
 
-/* ========== DESKTOP GRANDE (1024px+) ========== */
-@media (min-width: 1024px) {
-    .hero-subtitle {
-        font-size: 2rem;
-        max-width: 600px;
-    }
-    
-    .quote-form-section {
-        max-width: 550px;
-    }
-    
-    .services-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .contact-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* ========== CELULAR PEQUENO (até 360px) ========== */
-@media (max-width: 360px) {
+/* ========== CELULAR MUITO PEQUENO (até 320px) ========== */
+@media (max-width: 320px) {
     html {
         font-size: 13px;
     }
     
     body {
-        padding-top: 65px;
+        padding-top: 55px;
     }
     
     .header {
-        height: 65px;
-        padding: 0.4rem 0;
+        height: 55px;
+    }
+    
+    .header .container {
+        padding: 0 8px;
     }
     
     .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .logo span {
+        font-size: 0.65rem;
     }
     
     .nav {
-        gap: 0.5rem;
+        gap: 5px;
     }
     
     .nav-link {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        padding: 3px 4px;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
-    .quote-form-section {
-        padding: 1rem;
+    .form-input,
+    .form-textarea {
+        padding: 8px;
+        font-size: 0.85rem;
     }
     
     .cta-button {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
+        padding: 8px;
+        font-size: 0.8rem;
     }
 }
