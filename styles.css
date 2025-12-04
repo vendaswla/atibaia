@@ -826,6 +826,11 @@ body {
     color: #2c3e50;
 }
 
+.quote-form-subtitle strong {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
 /* Responsividade do Formulário */
 @media (max-width: 768px) {
     .quote-form-section {
@@ -838,47 +843,48 @@ body {
     }
     
     .quote-form-subtitle {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
     
     .form-input,
     .form-textarea {
-        padding: 0.8rem 0.9rem;
-        font-size: 0.9rem;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
     }
     
     .form-submit-btn {
-        padding: 0.9rem 1.8rem;
-        font-size: 0.95rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .quote-form-section {
-        padding: 1.5rem 1rem;
+        padding: 1.8rem 1.2rem;
         margin: 1.5rem 0;
     }
     
     .quote-form-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     
     .quote-form-subtitle {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .form-input,
     .form-textarea {
-        padding: 0.75rem 0.8rem;
-        font-size: 0.85rem;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
     }
     
     .form-submit-btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border-radius: 50px;
     }
     
     .quote-form-note {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 }
