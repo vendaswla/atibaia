@@ -835,7 +835,8 @@ body {
 @media (max-width: 768px) {
     .quote-form-section {
         padding: 2rem 1.5rem;
-        margin: 2rem 0;
+        margin: 2rem auto;
+        max-width: 90%; /* Limita a largura para centralizar */
     }
     
     .quote-form-title {
@@ -861,7 +862,8 @@ body {
 @media (max-width: 480px) {
     .quote-form-section {
         padding: 1.8rem 1.2rem;
-        margin: 1.5rem 0;
+        margin: 1.5rem auto;
+        max-width: 95%; /* Ajuste para telas menores */
     }
     
     .quote-form-title {
