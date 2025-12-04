@@ -122,7 +122,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    padding: 0 10px; /* Reduz o padding lateral para evitar que o texto toque as bordas em telas muito pequenas */
+    padding: 0 20px; /* Adiciona padding lateral para evitar que o texto toque as bordas em telas muito pequenas */
 }
 
 .hero-title {
@@ -836,7 +836,7 @@ body {
     .quote-form-section {
         padding: 2rem 1.5rem;
         margin: 2rem auto;
-        max-width: 80%; /* Reduz a largura para centralizar e diminuir o tamanho */
+        max-width: 90%; /* Limita a largura para centralizar */
     }
     
     .quote-form-title {
@@ -863,7 +863,7 @@ body {
     .quote-form-section {
         padding: 1.8rem 1.2rem;
         margin: 1.5rem auto;
-        max-width: 85%; /* Reduz a largura para centralizar e diminuir o tamanho */
+        max-width: 95%; /* Ajuste para telas menores */
     }
     
     .quote-form-title {
