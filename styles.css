@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     color: #2c3e50;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .container {
@@ -38,7 +40,7 @@ body {
 
 .logo h1 {
     color: #27ae60;
-    font-size: 1.8rem; /* Reduz o tamanho da fonte do título principal */
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: -5px;
 }
@@ -60,7 +62,7 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-    font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+    font-size: 0.9rem;
 }
 
 .nav-link:hover {
@@ -117,12 +119,12 @@ body {
 }
 
 .hero-text {
-    /* Adicionado para centralizar o texto e evitar cortes */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    padding: 0 20px; /* Adiciona padding lateral para evitar que o texto toque as bordas em telas muito pequenas */
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .hero-title {
@@ -138,9 +140,9 @@ body {
     color: #34495e;
     margin-bottom: 1.5rem;
     font-weight: 400;
-    /* Adicionado para garantir que o texto não ultrapasse o contêiner */
-    max-width: 100%; 
+    max-width: 100%;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .hero-description {
@@ -149,6 +151,7 @@ body {
     margin-bottom: 2.5rem;
     line-height: 1.8;
 }
+
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -169,9 +172,8 @@ body {
     box-shadow: 0 12px 35px rgba(243, 156, 18, 0.4);
 }
 
-/* Estilo para o botão do WhatsApp */
 .whatsapp-cta {
-    background: linear-gradient(135deg, #25d366, #128c7e); /* Cor verde do WhatsApp */
+    background: linear-gradient(135deg, #25d366, #128c7e);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
 }
 
@@ -181,44 +183,16 @@ body {
 }
 
 .phone-cta {
-    /* Mantém a cor laranja padrão do cta-button */
-    margin-left: 1rem; /* Espaço entre os botões */
+    margin-left: 1rem;
 }
 
 .cta-buttons-group {
     display: flex;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    margin-bottom: 2.5rem; /* Espaço após o grupo de botões */
-}
-
-@media (max-width: 480px) {
-    .cta-buttons-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    .phone-cta {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-}tém a cor laranja padrão do cta-button */
-    margin-left: 1rem; /* Espaço entre os botões */
-}
-
-.cta-buttons-group {
-    display: flex;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    margin-bottom: 2.5rem; /* Espaço após o grupo de botões */
-}
-
-@media (max-width: 480px) {
-    .cta-buttons-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    .phone-cta {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
 }
 
 .hero-image {
@@ -380,7 +354,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Cores específicas para cada rede social */
 .whatsapp .contact-icon {
     background: #25d366;
 }
@@ -395,38 +368,6 @@ body {
 
 .phone:hover {
     border-color: #3498db;
-}
-
-.facebook .contact-icon {
-    background: #1877f2;
-}
-
-.facebook:hover {
-    border-color: #1877f2;
-}
-
-.instagram .contact-icon {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-.instagram:hover {
-    border-color: #e6683c;
-}
-
-.tiktok .contact-icon {
-    background: #000000;
-}
-
-.tiktok:hover {
-    border-color: #000000;
-}
-
-.youtube .contact-icon {
-    background: #ff0000;
-}
-
-.youtube:hover {
-    border-color: #ff0000;
 }
 
 .maps .contact-icon {
@@ -445,153 +386,10 @@ body {
     border-color: #4285f4;
 }
 
-.social-media-section {
-    margin-top: 4rem;
-}
-
-.social-media-title {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-.social-media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-/* Estilo para o rodapé e ícones sociais */
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .header {
-        padding: 0.5rem 0; /* Reduz o padding vertical do header */
-    }
-    .header .container {
-        flex-direction: column;
-        gap: 0.5rem; /* Reduz o gap entre logo e nav */
-    }
-
-    .nav {
-        gap: 0.8rem; /* Reduz o gap entre os links */
-    }
-
-    .hero {
-        padding-top: 220px; /* Aumenta o padding para garantir que o conteúdo comece abaixo do cabeçalho fixo */
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    .hero-text {
-        padding: 0 20px; /* Aumenta o padding no mobile para melhor visualização */
-    }
-
-    .hero-subtitle {
-        font-size: 1.4rem;
-        /* Garante que o subtítulo não seja cortado */
-        max-width: 100%;
-        word-wrap: break-word;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .social-media-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .social-media-footer a {
-        font-size: 1.5rem; /* Ajuste o tamanho dos ícones no mobile */
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-info {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .social-media-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding-top: 120px;
-    }
-
-    .cta-button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-    }
-
-    .service-image {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* Animações */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.service-card,
-.contact-card {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.service-card:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.service-card:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.service-card:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.service-card:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-
 /* Testimonials Section */
 .testimonials {
     padding: 6rem 0;
-    background: #f4f4f4; /* Fundo levemente cinza para destacar */
+    background: #f4f4f4;
 }
 
 .testimonials-grid {
@@ -610,7 +408,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 180px; /* Altura mínima para padronizar */
+    min-height: 180px;
 }
 
 .testimonial-card:hover {
@@ -641,7 +439,7 @@ body {
 }
 
 .stars {
-    color: #f39c12; /* Cor amarela/laranja para as estrelas */
+    color: #f39c12;
     font-size: 1rem;
 }
 
@@ -649,14 +447,7 @@ body {
     margin-right: 2px;
 }
 
-/* Responsividade para a seção de avaliações */
-@media (max-width: 768px) {
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Estilo para o rodapé */
+/* Footer */
 .footer {
     background: #2c3e50;
     color: white;
@@ -680,16 +471,16 @@ body {
 
 .footer-cta {
     color: #ffffff;
-    font-size: 1.2rem; /* Aumentando um pouco o tamanho */
-    font-weight: 700; /* Deixando a fonte mais grossa (bold) */
+    font-size: 1.2rem;
+    font-weight: 700;
     margin: 0;
-    flex-grow: 1; /* Permite que a frase ocupe o espaço central */
+    flex-grow: 1;
     text-align: center;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Adicionando uma leve sombra para destacar */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 .social-media-footer {
-    margin: 0; /* Remove margem inferior que estava causando problemas */
+    margin: 0;
     display: flex;
     gap: 1rem;
 }
@@ -709,22 +500,6 @@ body {
     font-size: 0.9rem;
     margin-top: 1rem;
 }
-
-@media (max-width: 768px) {
-    .footer-content-wrapper {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .footer-cta {
-        font-size: 1rem;
-    }
-
-    .social-media-footer {
-        justify-content: center;
-    }
-}
-
 
 /* Estilos do Formulário de Orçamento */
 .quote-form-section {
@@ -831,60 +606,315 @@ body {
     color: #2c3e50;
 }
 
-/* Responsividade do Formulário */
-@media (max-width: 768px) {
-    .quote-form-section {
-        padding: 2rem 1.5rem;
-        margin: 2rem 0;
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    
-    .quote-form-title {
-        font-size: 1.5rem;
-    }
-    
-    .quote-form-subtitle {
-        font-size: 1rem;
-    }
-    
-    .form-input,
-    .form-textarea {
-        padding: 0.9rem 1rem;
-        font-size: 1rem;
-    }
-    
-    .form-submit-btn {
-        padding: 1rem 2rem;
-        font-size: 1rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 480px) {
+.service-card,
+.contact-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.service-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+/* Responsividade Geral */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Desktop (maior que 768px) */
+@media (min-width: 769px) {
+    .hero-content {
+        gap: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+        max-width: 600px;
+    }
+    
     .quote-form-section {
-        padding: 1.8rem 1.2rem;
+        max-width: 600px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .service-image {
+        max-width: 120px;
+        max-height: 120px;
+    }
+    
+    .hero-image img {
+        max-width: 500px;
+    }
+}
+
+/* Tablet e Mobile (até 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header ajustado */
+    .header {
+        padding: 0.8rem 0;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo span {
+        font-size: 0.8rem;
+    }
+    
+    .nav {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
+    
+    /* Hero ajustado */
+    .hero {
+        padding-top: 140px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 10px;
+    }
+    
+    .hero-text {
+        padding: 0;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+    
+    /* Formulário ajustado */
+    .quote-form-section {
+        padding: 1.5rem;
         margin: 1.5rem 0;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .quote-form-title {
         font-size: 1.4rem;
     }
     
-    .quote-form-subtitle {
+    /* Botões CTA ajustados */
+    .cta-buttons-group {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
         font-size: 1rem;
+    }
+    
+    .phone-cta {
+        margin-left: 0;
+    }
+    
+    /* Imagem do hero */
+    .hero-image img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* Seção de serviços */
+    .services {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    /* Seção de depoimentos */
+    .testimonials {
+        padding: 3rem 0;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    /* Seção de contato */
+    .contact {
+        padding: 3rem 0;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contact-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.85rem;
+    }
+    
+    /* Rodapé */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-content-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-cta {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .social-media-footer a {
+        font-size: 1.5rem;
+    }
+    
+    /* Ajustes gerais de espaçamento */
+    section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 130px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .quote-form-section {
+        padding: 1.2rem;
+    }
+    
+    .quote-form-title {
+        font-size: 1.3rem;
     }
     
     .form-input,
     .form-textarea {
-        padding: 0.9rem 1rem;
+        padding: 0.8rem;
         font-size: 1rem;
     }
     
-    .form-submit-btn {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        border-radius: 50px;
-    }
-    
-    .quote-form-note {
+    .cta-button {
         font-size: 0.95rem;
+        padding: 0.9rem 1.2rem;
+    }
+    
+    .service-card {
+        padding: 1.2rem;
+    }
+    
+    .service-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        padding: 1.2rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    
+    /* Garantir que textos não sejam cortados */
+    .hero-text,
+    .service-card p,
+    .testimonial-card,
+    .contact-description {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
